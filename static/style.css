@@ -110,6 +110,12 @@ textarea {
     .nav-center {
         padding-left: 25%;
     }
+
+    li {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 50px;
+    }
 }
 
 nav.nav-center {
@@ -143,14 +149,54 @@ div.row.profile {
     color: #FFF;
 }
 
-li {
-    display: inline-block;
-    padding: 10px;
-}
-
 .nav-header {
     font-size: 15px;
     padding: 10px 45px;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    color: #FFF;
+    padding-bottom: 8px;
+}
+
+a:hover {
+    border-bottom: solid 2px #FFF;
+}
+
+a.fi-web:hover, a.fi-social-facebook:hover, a.fi-social-github:hover, a.fi-social-linkedin:hover {
+    border: none;
+}
+
+img {
+    padding: 10px;
+}
+
+.responsive-img.circle {
+    padding: 0;
+}
+
+div.row-portfolio {
+    height: 300px;
+}
+
+.row.row-portfolio {
+    height: auto;
+}
+
+.col.s8.center-align {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.box {
+    background: #FFF;
+    width: 75%;
+    margin-top: 100px;
+    border-radius: 5px;
 }
 
 /* ==========================================================================
