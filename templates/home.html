@@ -1,21 +1,63 @@
-{% load static %}
 <!doctype html>
+{% load static %}
 <html>
 <head>
     <title>My Portfolio</title>
 
-    <meta charset="utf-8" />
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="{% static '/normalize.css' %}">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="{% static '/style.css' %}">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="{% static '/script.js' %}"></script>
+
 </head>
 
 <body>
-<div>
-    <h1>Example Domain</h1>
-    <p>This domain is established to be used for illustrative examples in documents. You may use this
-    domain in examples without prior coordination or asking for permission.</p>
-    <p><a href="http://www.iana.org/domains/example">More information...</a></p>
+
+<header class="main-header">
+<div class="row">
+    <div class="col s4"></div>
+    <div class="col s4 center">
+        <ul>
+            <li class="nav-header">Home</li>
+            <li class="nav-header">Portfolio</li>
+            <li class="nav-header">About Me</li>
+            <li class="nav-header">Contact</li>
+        </ul>
+    </div>
+    <div class="col s4"></div>
 </div>
+
+<div class="row">
+    <div class="col s12"></div>
+</div>
+
+<div class="row profile">
+    <div class="col s4"></div>
+    <div class="col s4 center"><img class="responsive-img circle" src="{% static '/img/portrait.png' %}"
+                                    alt="profile picture of Greg
+                                    Czaplicki">
+        <h5>Greg Czaplicki</h5>
+        <h6>Full-Stack Developer</h6>
+        <p> ____ </p>
+        <ul>
+            <li>Facebook</li>
+            <li>Udacity</li>
+            <li>LinkedIn</li>
+            <li>GitHub</li>
+        </ul>
+    </div>
+    <div class="col s4"></div>
+</div>
+    </header>
+
 </body>
 </html>
