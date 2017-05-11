@@ -115,6 +115,7 @@ section#header {
 section#about {
     background-image: url("img/bubble.png");
     width: 100%;
+    padding-bottom: 30px;
 }
 
 @media screen and (min-width: 980px) /* Desktop */ {
@@ -163,12 +164,31 @@ a.fi-web:hover, a.fi-social-facebook:hover, a.fi-social-github:hover, a.fi-socia
 .box {
     background: #FFF;
     width: 75%;
-    margin-top: 100px;
+    margin-top: 50px;
     border-radius: 5px;
 }
 
-.tooltipped-footer {
+p {
+    padding: 20px;
+}
+
+.footer-social {
     color: black;
+}
+
+#copyright {
+    color: white;
+}
+
+.col.s12.center-align.bt-footer {
+    height: 50px;
+    background: #67B26F; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #4ca2cd, #67B26F); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 15px;
+    margin: 0;
+    position: relative;
+    top: 50px;
 }
 
 /* ==========================================================================
