@@ -1,5 +1,6 @@
-from django.views.generic import TemplateView
+from django.shortcuts import render
 
 
-class HomeView(TemplateView):
-    template_name = 'home.html'
+def HomeView(request):
+    my_email = 'glc3344@gmail.com'
+    return render(request, 'home.html', {'email': my_email})
