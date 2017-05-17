@@ -168,6 +168,22 @@ a.fi-web:hover, a.fi-social-facebook:hover, a.fi-social-github:hover, a.fi-socia
     border-radius: 5px;
 }
 
+#name {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#job-title {
+    font-weight: 300;
+    color: #FFF;
+    font-size: 22px;
+}
+
+#dash {
+    color: #FFF;
+}
+
 p {
     padding: 20px;
 }
@@ -189,6 +205,36 @@ p {
     margin: 0;
     position: relative;
     top: 50px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    section#header, section#about {
+        background: #67B26F; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #4ca2cd, #67B26F); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    a {
+        font-size: x-large;
+    }
+
+    .responsive-img.circle {
+        width: 40%;
+    }
+
+    .tooltipped {
+        font-size: 45px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
 }
 
 /* ==========================================================================
