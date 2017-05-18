@@ -83,6 +83,42 @@
 <section id="portfolio">
     <div class="container">
 
+        <div class="row">
+            <div class="col s10 offset-s1">
+                {% if messages %}
+                    <ul class="messages center-align">
+                        {% for message in messages %}
+                            {% if message.tags == 'success' %}
+                                <li class="chip green">
+                                    <strong>
+                                        SUCCESS!
+                                    </strong>
+                                    {{ message }}
+                                <i class=" close material-icons right white-text">close</i>
+                                <i class="material-icons white-text left"
+                                    style="padding-top: 4px"
+                                 >check_circle</i>
+                                </li>
+                            {% else %}
+                                <li class="chip red">
+                                    <strong>
+                                        ERROR!
+                                    </strong>
+                                    {{ message }}
+                                <i class=" close material-icons right
+                                white-text">close</i>
+                                 <i class="material-icons white-text left"
+                                    style="padding-top: 4px"
+                                 >info_outline</i>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
+
         <div class="row center">
             <h1>Projects</h1>
         </div>
@@ -90,46 +126,87 @@
 
         <div class="row center">
             <div class="col l4 s12">
-                <a href="https://greg-czaplicki.github.io/"><img id="portfolio"
-                     class="section scrollspy img-portfolio responsive-img"
-                     src="{% static '/img/brewery.png' %}"
-                     alt=""></a>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static '/img/grocery.png' %}">
+                        <a href="http://grocery.gregczaplicki.com"
+                           class="btn-floating halfway-fab
+                        waves-effect
+                        waves-light red" target="_blank"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <span class="card-title">Grocery List App</span>
+                    <div class="card-content">
+                        <p class="content-p">A Django based app that allows
+                                             the user
+                                             to add
+                                             and
+                                             categorize items on their grocery
+                                             list. Items can
+                                             have weights and/or quantity
+                                             associated with them.
+                                             Items can be clicked/tapped to
+                                             mark as 'completed'.
+                                             Basic CRUD operations used to
+                                             manage
+                                             the database</p>
+                    </div>
+                </div>
             </div>
 
             <div class="col l4 s12">
-                <a href="https://greg-czaplicki.github.io/"><img id="portfolio"
-                     class="section scrollspy img-portfolio responsive-img"
-                     src="{% static '/img/brewery.png' %}"
-                     alt=""></a>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static '/img/brewery.png' %}">
+                        <a href="http://greg-czaplicki.github.io/"
+                           class="btn-floating halfway-fab
+                        waves-effect
+                        waves-light red" target="_blank"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <span class="card-title">CT Brewery Trail App</span>
+                    <div class="card-content">
+                        <p class="content-p">A single page application
+                                             featuring a list of breweries
+                                             inthe state of Connecticut. Built
+                                             using Javascript, Knockout.js,
+                                             jQuery, HTML/CSS and Yelp API. The
+                                             app allows you to filter the
+                                             brewery list down as you type. In
+                                             return, it displays the marker
+                                             on the map with Yelp
+                                             information window.</p>
+                    </div>
+                </div>
             </div>
 
             <div class="col l4 s12">
-                <a href="https://greg-czaplicki.github.io/"><img id="portfolio"
-                     class="section scrollspy img-portfolio responsive-img"
-                     src="{% static '/img/brewery.png' %}"
-                     alt=""></a>
+                <a href="https://greg-czaplicki.github.io/"><img
+                        class="section scrollspy img-portfolio responsive-img"
+                        src="{% static '/img/brewery.png' %}"
+                        alt=""></a>
             </div>
         </div>
         <div class="row center">
             <div class="col l4 s12">
-                <img id="portfolio"
-                     class="section scrollspy img-portfolio"
-                     src="http://www.fillmurray.com/g/300/300"
-                     alt="">
+                <img
+                        class="section scrollspy img-portfolio"
+                        src="http://www.fillmurray.com/g/300/300"
+                        alt="">
             </div>
 
             <div class="col l4 s12">
-                <img id="portfolio"
-                     class="section scrollspy img-portfolio"
-                     src="http://www.fillmurray.com/g/300/300"
-                     alt="">
+                <img
+                        class="section scrollspy img-portfolio"
+                        src="http://www.fillmurray.com/g/300/300"
+                        alt="">
             </div>
 
             <div class="col l4 s12">
-                <img id="portfolio"
-                     class="section scrollspy img-portfolio"
-                     src="http://www.fillmurray.com/g/300/300"
-                     alt="">
+                <img
+                        class="section scrollspy img-portfolio"
+                        src="http://www.fillmurray.com/g/300/300"
+                        alt="">
             </div>
             </di
 
@@ -178,20 +255,6 @@
                 center-align">Contact Me</h1>
         </div>
 
-        <div class="row">
-            <div class="col s10 offset-s1">
-                {% if messages %}
-                    <ul class="messages center-align">
-                        {% for message in messages %}
-                            <li
-                                    {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
-            </div>
-        </div>
-
-
         <form method="POST" action="">
             {% csrf_token %}
             <div class="row">
@@ -201,7 +264,8 @@
                            type="text"
                            class="validate"
                            name="{{ form.contact_name.name }}">
-                    <label for="icon_prefix">Name</label>
+                    <label for="icon_prefix" data-error="Name is
+                    required">Name</label>
                 </div>
 
 
@@ -211,7 +275,8 @@
                            type="email"
                            class="validate"
                            name="{{ form.contact_email.name }}">
-                    <label for="icon_email">E-mail</label>
+                    <label for="icon_email" data-error="Not a
+                    valid E-mail">E-mail</label>
                 </div>
             </div>
 

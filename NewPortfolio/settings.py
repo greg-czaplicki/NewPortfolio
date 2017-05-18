@@ -117,9 +117,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_HOST = 'smtp.zoho.com'
+DEFAULT_FROM_EMAIL = 'me@gregczaplicki.com'
+EMAIL_HOST_USER = 'me@gregczaplicki.com'
+EMAIL_HOST_PASSWORD = 'guitar3344'
 EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465

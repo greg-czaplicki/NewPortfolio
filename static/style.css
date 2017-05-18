@@ -168,6 +168,17 @@ a.fi-web:hover, a.fi-social-facebook:hover, a.fi-social-github:hover, a.fi-socia
     border-radius: 5px;
 }
 
+img {
+    object-fit: cover;
+    object-position: 0 0;
+    height: 230px;
+    margin-bottom: 20px;
+}
+
+.content-p {
+    padding-top: 0;
+}
+
 #name {
     color: #FFF;
     font-weight: 700;
@@ -190,6 +201,19 @@ p {
 
 .footer-social {
     color: black;
+}
+
+.chip.red {
+    color: #FFF;
+    font-size: 18px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.chip.green {
+    color: #FFF;
+    font-size: 18px;
+    height: auto;
 }
 
 #copyright {

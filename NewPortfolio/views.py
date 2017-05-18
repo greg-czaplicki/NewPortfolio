@@ -31,16 +31,19 @@ def HomeView(request):
             content = template.render(context)
 
             email = EmailMessage(
-                "New contact form submission",
-                content,
-                "Your website" + '',
-                ['youremail@gmail.com'],
-                headers={'Reply-To': contact_email}
+                body='Name: ' + contact_name + '\n' + 'E-mail: ' +
+                     contact_email + '\n' + 'Content: ' + form_content,
+                subject='Contact Form E-mail',
+                from_email='me@gregczaplicki.com',
+                to=['me@gregczaplicki.com'],
+                reply_to=[contact_email],
+                headers={'Content-Type': 'text/plain'}
+                # headers={'Reply-To': contact_email}
             )
             email.send()
             messages.success(request, 'Thanks for the message!')
         else:
-            messages.error(request, 'All fields are required!')
+            messages.error(request, 'You must fill in all fields!')
 
 
     return render(request, 'home.html', {'form': form_class})
