@@ -84,7 +84,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col s10 offset-s1">
+            <div class="col s12">
                 {% if messages %}
                     <ul class="messages center-align">
                         {% for message in messages %}
@@ -94,10 +94,10 @@
                                         SUCCESS!
                                     </strong>
                                     {{ message }}
-                                <i class=" close material-icons right white-text">close</i>
-                                <i class="material-icons white-text left"
-                                    style="padding-top: 4px"
-                                 >check_circle</i>
+                                    <i class=" close material-icons right white-text">close</i>
+                                    <i class="material-icons white-text left"
+                                       style="padding-top: 4px"
+                                    >check_circle</i>
                                 </li>
                             {% else %}
                                 <li class="chip red">
@@ -105,11 +105,11 @@
                                         ERROR!
                                     </strong>
                                     {{ message }}
-                                <i class=" close material-icons right
+                                    <i class=" close material-icons right
                                 white-text">close</i>
-                                 <i class="material-icons white-text left"
-                                    style="padding-top: 4px"
-                                 >info_outline</i>
+                                    <i class="material-icons white-text left"
+                                       style="padding-top: 4px"
+                                    >info_outline</i>
                                 </li>
                             {% endif %}
                         {% endfor %}
@@ -181,35 +181,75 @@
             </div>
 
             <div class="col l4 s12">
-                <a href="https://greg-czaplicki.github.io/"><img
-                        class="section scrollspy img-portfolio responsive-img"
-                        src="{% static '/img/brewery.png' %}"
-                        alt=""></a>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static '/img/items.png' %}">
+                        <a href="https://github.com/greg-czaplicki/udacity-itemcatalog"
+                           class="btn-floating halfway-fab
+                        waves-effect
+                        waves-light red" target="_blank"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <span class="card-title">CMS Item Catalog</span>
+                    <div class="card-content">
+                        <p class="content-p">Developed a content
+                                             management
+                                             system using the Flask framework
+                                             in Python. Authentication is
+                                             provided via OAuth and all data is
+                                             stored within a PostgreSQL
+                                             database. This project provides a
+                                             list of items within a variety of
+                                             categories and integrates
+                                             Google+ user authorization and
+                                             authentication.</p>
+                    </div>
+                </div>
             </div>
+
         </div>
+
         <div class="row center">
-            <div class="col l4 s12">
-                <img
-                        class="section scrollspy img-portfolio"
-                        src="http://www.fillmurray.com/g/300/300"
-                        alt="">
+            <div class="col l12 s12 center-align">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static '/img/linux.png' %}">
+                        <a href="https://github.com/greg-czaplicki/udacity-linux-server-configuration"
+                           class="btn-floating halfway-fab
+                        waves-effect
+                        waves-light red" target="_blank"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <span class="card-title">Linux Server Configuration</span>
+                    <div class="card-content">
+                        <p class="content-p">Installed and configured all
+                                             required software to turn a
+                                             baseline Ubuntu Amazon Web
+                                             Services server into a fully
+                                             functional web application
+                                             server including installing
+                                             updates, securing it from a number
+                                             of attack vectors and
+                                             installing/configuring web and
+                                             database servers.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col l4 s12">
-                <img
-                        class="section scrollspy img-portfolio"
-                        src="http://www.fillmurray.com/g/300/300"
-                        alt="">
-            </div>
-
-            <div class="col l4 s12">
-                <img
-                        class="section scrollspy img-portfolio"
-                        src="http://www.fillmurray.com/g/300/300"
-                        alt="">
-            </div>
-            </di
-
+{#            <div class="col l4 s12">#}
+{#                <img#}
+{#                        class="section scrollspy img-portfolio"#}
+{#                        src="http://www.fillmurray.com/g/300/300"#}
+{#                        alt="">#}
+{#            </div>#}
+{##}
+{#            <div class="col l4 s12">#}
+{#                <img#}
+{#                        class="section scrollspy img-portfolio"#}
+{#                        src="http://www.fillmurray.com/g/300/300"#}
+{#                        alt="">#}
+{#            </div>#}
+{#            </div>#}
 
         </div>
 </section>

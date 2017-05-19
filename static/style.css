@@ -205,15 +205,16 @@ p {
 
 .chip.red {
     color: #FFF;
-    font-size: 18px;
+    font-size: 16px;
     height: auto;
     border-radius: 5px;
 }
 
 .chip.green {
     color: #FFF;
-    font-size: 18px;
+    font-size: 16px;
     height: auto;
+    border-radius: 5x;
 }
 
 #copyright {
