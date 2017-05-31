@@ -130,6 +130,15 @@ section#about {
     }
 }
 
+.popouts{
+    display: block;
+    font-size: 16px;
+}
+
+.col.s10.offset-s1.box.z-depth-5 {
+    padding: 0 50px;
+}
+
 .circle {
     height: 12%;
     width: 12%;
@@ -179,16 +188,24 @@ img {
     padding-top: 0;
 }
 
+.btn-floating {
+    background: gray;
+}
+
 #name {
     color: #FFF;
-    font-weight: 700;
-    font-size: 30px;
+    font-weight: 100;
+    font-size: 40px;
 }
 
 #job-title {
-    font-weight: 300;
+    font-weight: 200;
     color: #FFF;
     font-size: 22px;
+}
+
+h1, h5, h6, .card-title {
+    font-weight: 200;
 }
 
 #dash {
@@ -197,6 +214,7 @@ img {
 
 p {
     padding: 20px;
+    font-weight: 400;
 }
 
 .footer-social {
@@ -232,6 +250,12 @@ p {
     top: 50px;
 }
 
+.material-icons.hide-on-med-and-up {
+    float: left;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
 @media only screen
 and (min-device-width: 320px)
 and (max-device-width: 1024px)
@@ -247,8 +271,8 @@ and (-webkit-min-device-pixel-ratio: 1) {
         font-size: x-large;
     }
 
-    .responsive-img.circle {
-        width: 40%;
+    img.responsive-img.circle {
+        min-width: 40%;
     }
 
     .tooltipped {
@@ -258,6 +282,30 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
     h1 {
         font-size: 40px;
+    }
+
+    .col.s10.offset-s1.box.z-depth-5 {
+    padding: 0 15px;
+}
+
+    /*a.fi-social-facebook.tooltipped {*/
+        /*font-size: 40px;*/
+    /*}*/
+
+    /*a.fi-social-linkedin.tooltipped {*/
+        /*font-size: 40px;*/
+    /*}*/
+
+    /*a.fi-social-github.github {*/
+        /*font-size: 40px;*/
+    /*}*/
+
+    /*a.fi-social-udacity.udacity {*/
+        /*font-size: 40px;*/
+    /*}*/
+
+    .side-nav li > a {
+        font-size: 24px;
     }
 
 }

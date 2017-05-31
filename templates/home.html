@@ -27,60 +27,86 @@
 <body>
 
 <section id="header">
-    <div class="container">
-        <div id="home" class="row">
-            <div class="col s12 center">
-                <ul>
-                    <li class="nav-link"><a href="#home">Home</a></li>
-                    <li class="nav-link"><a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-link"><a href="#about">About Me</a></li>
-                    <li class="nav-link"><a href="#contact">Contact</a></li>
-                </ul>
+    <div class="nav-wrapper">
+        <div class="container">
+            <div id="home" class="row">
+                <div class="col s12 center">
+                    <a href="#"
+                       data-activates="mobile-demo"
+                       class="button-collapse"><i class="material-icons hide-on-med-and-up">menu</i></a>
+                    <ul class="hide-on-small-and-down">
+                        <li class="nav-link"><a href="#home">Home</a></li>
+                        <li class="nav-link"><a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-link"><a href="#about">About Me</a></li>
+                        <li class="nav-link"><a href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="https://s3-us-west-2.amazonaws.com/udacity-profiles/production/resume/9538483359-1b62fdd928387857800dc441928b6996.pdf">Resume</a>
+                        </li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li class="nav-link"><a href="#home">Home</a></li>
+                        <li class="nav-link"><a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-link"><a href="#about">About Me</a></li>
+                        <li class="nav-link"><a href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="https://s3-us-west-2.amazonaws.com/udacity-profiles/production/resume/9538483359-1b62fdd928387857800dc441928b6996.pdf">Resume</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col s12 center-align">
-                <img class="responsive-img circle"
-                     src="{% static '/img/portrait.png' %}"
-                     alt="profile picture of Greg Czaplicki">
-                <h5 id="name">Greg Czaplicki</h5>
-                <h6 id="job-title">Full-Stack Developer</h6>
-                <p id="dash"> ______ </p>
-                <ul>
-                    <li><a class="fi-social-facebook tooltipped"
-                           data-position="top"
-                           data-tooltip="Facebook"
-                           href="https://www.facebook.com/greg.czaplicki.9"
-                           target="_blank">
-                    </a></li>
-                    <li><a class="fi-social-linkedin tooltipped"
-                           data-position="top"
-                           data-tooltip="LinkedIn"
-                           href="https://www.linkedin.com/in/gczaplicki/"
-                           target="_blank">
-                    </a></li>
-                    <li><a class="fi-social-github tooltipped"
-                           data-position="top"
-                           data-tooltip="GitHub"
-                           href="https://github.com/greg-czaplicki"
-                           target="_blank">
-                    </a></li>
-                    <li><a class="fi-web tooltipped"
-                           data-position="top"
-                           data-tooltip="Udacity"
-                           href="https://profiles.udacity.com/p/9538483359"
-                           target="_blank">
-                    </a></li>
-                </ul>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <img class="responsive-img circle"
+                         src="{% static '/img/portrait.png' %}"
+                         alt="profile picture of Greg Czaplicki">
+                    <h5 id="name">Gregory Czaplicki</h5>
+                    <h6 id="job-title">Full-Stack Developer</h6>
+                    <p id="dash"> ______ </p>
+                    <ul>
+                        <li><a class="fi-social-facebook tooltipped"
+                               data-position="top"
+                               data-tooltip="Facebook"
+                               href="https://www.facebook.com/greg.czaplicki.9"
+                               target="_blank">
+                        </a></li>
+                        <li><a class="fi-social-linkedin tooltipped"
+                               data-position="top"
+                               data-tooltip="LinkedIn"
+                               href="https://www.linkedin.com/in/gczaplicki/"
+                               target="_blank">
+                        </a></li>
+                        <li><a class="fi-social-github tooltipped"
+                               data-position="top"
+                               data-tooltip="GitHub"
+                               href="https://github.com/greg-czaplicki"
+                               target="_blank">
+                        </a></li>
+                        <li><a class="fi-web tooltipped"
+                               data-position="top"
+                               data-tooltip="Udacity"
+                               href="https://profiles.udacity.com/p/9538483359"
+                               target="_blank">
+                        </a></li>
+                        <li><a class="fi-page tooltipped"
+                               data-position="top"
+                               data-tooltip="Resume"
+                               href="https://s3-us-west-2.amazonaws.com/udacity-profiles/production/resume/9538483359-1b62fdd928387857800dc441928b6996.pdf"
+                               target="_blank">
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="col s4"></div>
             </div>
-            <div class="col s4"></div>
-        </div>
 
+        </div>
     </div>
 </section>
 
-<section id="portfolio">
+<section id="portfolio" class="section scrollspy">
     <div class="container">
 
         <div class="row">
@@ -193,6 +219,7 @@
                     <span class="card-title">CMS Item Catalog</span>
                     <div class="card-content">
                         <p class="content-p">Developed a content
+
                                              management
                                              system using the Flask framework
                                              in Python. Authentication is
@@ -201,8 +228,7 @@
                                              database. This project provides a
                                              list of items within a variety of
                                              categories and integrates
-                                             Google+ user authorization and
-                                             authentication.</p>
+                                             Google+ authentication.</p>
                     </div>
                 </div>
             </div>
@@ -235,52 +261,114 @@
                     </div>
                 </div>
             </div>
-
-{#            <div class="col l4 s12">#}
-{#                <img#}
-{#                        class="section scrollspy img-portfolio"#}
-{#                        src="http://www.fillmurray.com/g/300/300"#}
-{#                        alt="">#}
-{#            </div>#}
-{##}
-{#            <div class="col l4 s12">#}
-{#                <img#}
-{#                        class="section scrollspy img-portfolio"#}
-{#                        src="http://www.fillmurray.com/g/300/300"#}
-{#                        alt="">#}
-{#            </div>#}
-{#            </div>#}
-
         </div>
 </section>
 
-<section id="about">
+<section id="about" class="section scrollspy">
     <div class="container">
         <div class="row">
             <div class="col s10 offset-s1 box z-depth-5">
                 <h1 class="section scrollspy center-align">About Me</h1>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est
-                    laborum."
-                </p>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat. Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est
-                    laborum."
-                </p>
+
+
+                <ul class="collapsible popout collapsible-accordion"
+                    data-collapsible="accordion">
+                    <li class="popouts">
+                        <div class="collapsible-header active">
+                            <i class="material-icons">person</i>Life
+                        </div>
+                        <div class="collapsible-body"><span>
+                            My name is Greg and I'm a self-taught full-stack
+                            developer currently based in Connecticut.
+                            Originally majoring in Computer Science at
+                            college I
+                            switched to Economics.  Seven years later I've
+                            come full circle and I'm doing what I enjoy
+                            most, programming/web development.
+                        </span>
+                        </div>
+                    </li>
+                    <li class="popouts">
+                        <div class="collapsible-header">
+                            <i class="material-icons">whatshot</i>Programming
+                        </div>
+                        <div class="collapsible-body"><span>One of the most enjoyable aspects of web development is the sense of accomplishment I get when I complete a project. The constant problem solving and plan of action keeps me excited and motivated every single day. No matter how frustrating a project can become the satisfaction I get from writing that single line of code that moves me one step closer to the end goal is extremely rewarding.
+<br><br>
+The speed in which languages and frameworks are advancing and the things you can develop today compared to even a few years ago is remarkable. The possibilities of what you can create are endless and that is by far the thing I enjoy most about web development.</span>
+                        </div>
+                    </li>
+                    <li class="popouts">
+                        <div class="collapsible-header">
+                            <i
+                                    class="material-icons">library_books</i>Interests
+                        </div>
+                        <div class="collapsible-body"><span>When I'm not
+                                                            programming I'm
+                                                            usally found
+                                                            playing
+                                                            guitar or
+                                                            golf.  I
+                                                            enjoy brewing
+                                                            beer, snowboarding
+                                                            and pretty
+                                                            much all things
+                                                            sports.  I am an
+                                                            avid fan of the
+                                                            New York
+                                                            Jets, Mets,
+                                                            Knicks and the
+                                                            UConn Huskies.
+                        </span>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <h5 class="center-align">Skills</h5>
+                <div class="row">
+                    <div class="col l12 s12 center-align" style="padding:
+                    20px">
+
+                        <div class="chip">
+                            Python
+                        </div>
+                        <div class="chip">
+                            Django
+                        </div>
+                        <div class="chip">
+                            HTML
+                        </div>
+                        <div class="chip">
+                            CSS
+                        </div>
+                        <div class="chip">
+                            Bootstrap
+                        </div>
+                        <div class="chip">
+                            MaterializeCSS
+                        </div>
+                        <div class="chip">
+                            Digital Ocean/AWS
+                        </div>
+                        <div class="chip">
+                            Javascript
+                        </div>
+                        <div class="chip">
+                            jQuery
+                        </div>
+                        <div class="chip">
+                            Flask
+                        </div>
+                        <div class="chip">
+                            Databases (SQL, PostgreSQL)
+                        </div>
+                        <div class="chip">
+                            Linux
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -367,6 +455,12 @@
                            data-position="top"
                            data-tooltip="Udacity"
                            href="https://profiles.udacity.com/p/9538483359"
+                           target="_blank">
+                    </a></li>
+                    <li><a class="fi-page tooltipped footer-social"
+                           data-position="top"
+                           data-tooltip="Resume"
+                           href="https://s3-us-west-2.amazonaws.com/udacity-profiles/production/resume/9538483359-1b62fdd928387857800dc441928b6996.pdf"
                            target="_blank">
                     </a></li>
                 </ul>
